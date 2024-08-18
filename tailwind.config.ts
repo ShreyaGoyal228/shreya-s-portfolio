@@ -1,20 +1,51 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
 
-const config: Config = {
+const config = {
+  darkMode: ["class"],
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
+  prefix: "",
   theme: {
+    container: {
+    padding:{
+        DEFAULT: "1rem",
+        md: "1.5rem",
+        lg: "3.125rem",
+        xl: "5rem",
+        "2xl": "6.25rem",
+    }
+    },
+    screens:{
+sm:"425px",
+  md: "768px",
+  lg: "1024px",
+  xl: "1366px",
+  "2xl": "1920px",
+    },
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      animation: {
+        typewriter: "typewriter 2s steps(11) forwards"
       },
+      keyframes: {
+        typewriter: {
+          to: {
+            left: "100%"
+          }
+        }
+      },
+    colors:{
+      primary:"#3B82F6",
+    },
+    fontFamily:{
+      stylish:"'Stylish', serif"
+    }
     },
   },
-  plugins: [],
-};
-export default config;
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config
+
+export default config
