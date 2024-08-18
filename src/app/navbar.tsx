@@ -14,13 +14,7 @@ function Navbar() {
     { name: "Projects", link: "/projects" },
   ];
 
-useEffect(()=>{
-const main=document.querySelector(".main");
-if(responsiveNavVisible)
-{
-    main?.classList.add("bg-red-100")
-}
-},[])
+
 
   return (
     <nav className="bg-black container mx-auto max-w-full flex items-center justify-between py-4 sticky top-0 left-0 z-10">

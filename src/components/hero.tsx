@@ -37,7 +37,7 @@ const Hero = () => {
                       duration: 0.3,
                       ease: "easeInOut",
                       delay: 1.05,
-                    }}>I'M <span className="text-primary mb-3">Shreya Goyal</span></motion.div>
+                    }}>{`I'M`} <span className="text-primary mb-3">Shreya Goyal</span></motion.div>
                     <motion.div className="text-primary text-[35px] lg:text-[25px] xl:text-[35px] 2xl:text-[48px] font-semibold mb-5 lg:mb-0"
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}

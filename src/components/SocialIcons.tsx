@@ -42,7 +42,7 @@ function SocialIcons() {
     >
       <ul className="flex flex-col items-start justify-center gap-3 after:content-[''] after:bg-[#a8b2d1] after:w-[2px] after:h-[120px] after:mx-auto">
         {socialLinks.map(({ name, icon, link }) => (
-          <li title={name} className="p-5 text-[22px] transition duration-500 ease-in-out hover:-translate-y-1 ">
+          <li key={name} title={name} className="p-5 text-[22px] transition duration-500 ease-in-out hover:-translate-y-1 ">
             <Link
               href={link}
               className="text-[#a8b2d1] hover:text-primary "
